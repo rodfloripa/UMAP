@@ -1,4 +1,4 @@
-<p align="justify"><h1><b>UMAP do jeito certo</b></h1></p>
+<p align="justify"><h1><b>UMAP do jeito certo usando MNIST</b></h1></p>
 
 <p align="justify">
 A transição do t-SNE para o <b>UMAP (Uniform Manifold Approximation and Projection)</b>, acompanhada de uma calibração rigorosa, é fundamental para análises de alta fidelidade. A vantagem da calibração é crucial para obter uma visualização de alta qualidade, especialmente em conjuntos de dados complexos como os dígitos do MNIST.
