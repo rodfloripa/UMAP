@@ -49,7 +49,8 @@ Mesmo sendo mais robusto que o t-SNE, o analista deve utilizar a calibração pa
 
 <p align="justify">
 Em resumo, a calibração permite ajustar o UMAP para extrair a melhor interpretabilidade possível. Isso supera as limitações clássicas do t-SNE, entregando um mapa onde a geometria 2D comunica fielmente a relação técnica entre as classes de dados.
-![UMAP](https://raw.githubusercontent.com/rodfloripa/UMAP/main/download%20(2).png)
+
+<img title="a title" alt="Alt text" src="https://raw.githubusercontent.com/rodfloripa/UMAP/main/download%20(2).png">
 </p>
 
 <p align="justify">
