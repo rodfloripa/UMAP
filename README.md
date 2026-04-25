@@ -7,7 +7,7 @@
 Este relatório apresenta uma análise detalhada do comportamento do algoritmo <b>UMAP</b> aplicado ao dataset MNIST (784 dimensões), com foco na relação entre fidelidade global (Shepard Diagram) e preservação da estrutura local (Trustworthiness - TW e Continuity - CT). O objetivo central foi identificar os limites estruturais da projeção em 2D e entender os trade-offs envolvidos na escolha dos hiperparâmetros.
 </p>
 
----
+
 
 <p align="justify"><h2>1. Configuração Experimental</h2></p>
 
@@ -25,7 +25,7 @@ umap.UMAP(
 )
 ````
 
----
+
 
 <p align="justify"><h2>2. Limite Estrutural do Shepard Diagram</h2></p>
 
@@ -37,7 +37,7 @@ shepard_score = 0.508
 Mesmo com grid search extensivo, esse valor representa um teto estrutural (~51% de correlação global).
 </p>
 
----
+
 
 <p align="justify"><h2>3. Trade-off: Global vs Local</h2></p>
 
@@ -51,7 +51,7 @@ TW = 0.861
 CT = 0.869
 ```
 
----
+
 
 <p align="justify"><h2>4. Estrutura dos Clusters</h2></p>
 
@@ -94,7 +94,7 @@ A sobreposição observada reflete propriedades reais do dataset. Abaixo, uma ta
 Esses agrupamentos explicam diretamente a sobreposição dos convex hulls no espaço 2D. O modelo está capturando ambiguidades reais da escrita manual.
 </p>
 
----
+
 
 <p align="justify"><h2>5. Impacto do <code>spread</code></h2></p>
 
@@ -103,7 +103,7 @@ Esses agrupamentos explicam diretamente a sobreposição dos convex hulls no esp
 <li><b>1.5:</b> melhor distribuição global</li>
 </ul>
 
----
+
 
 <p align="justify"><h2>6. Convex Hull</h2></p>
 
@@ -112,7 +112,7 @@ from scipy.spatial import ConvexHull
 hull = ConvexHull(points)
 ```
 
----
+
 
 <p align="justify"><h2>7. Aplicação Prática</h2></p>
 
@@ -121,7 +121,7 @@ hull = ConvexHull(points)
 umap.UMAP(n_neighbors=30, min_dist=0.5, spread=1.0)
 ```
 
----
+
 
 
 
@@ -138,7 +138,9 @@ spread=1.5
 <p align="justify">
 Em resumo, a calibração permite ajustar o UMAP para extrair a melhor interpretabilidade possível. Isso supera as limitações clássicas do t-SNE, entregando um mapa onde a geometria 2D comunica fielmente a relação técnica entre as classes de dados.
 
-<img title="O gráfico não está “ruim” — ele está <b>correto</b>. A sobreposição é a verdade do espaço original." alt="Alt text" src="https://raw.githubusercontent.com/rodfloripa/UMAP/main/umap.png">
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rodfloripa/UMAP/main/umap.png ">
+</p>
 
