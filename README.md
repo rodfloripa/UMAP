@@ -1,7 +1,7 @@
 <p align="justify"><h1><b>UMAP do jeito certo usando MNIST</b></h1></p>
 
 
-<p align="justify"><h1>Análise de Redução de Dimensionalidade com UMAP no MNIST</h1></p>
+
 
 <p align="justify">
 Este relatório apresenta uma análise detalhada do comportamento do algoritmo <b>UMAP</b> aplicado ao dataset MNIST (784 dimensões), com foco na relação entre fidelidade global (Shepard Diagram) e preservação da estrutura local (Trustworthiness - TW e Continuity - CT). O objetivo central foi identificar os limites estruturais da projeção em 2D e entender os trade-offs envolvidos na escolha dos hiperparâmetros.
