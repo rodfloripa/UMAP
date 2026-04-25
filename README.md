@@ -123,22 +123,17 @@ umap.UMAP(n_neighbors=30, min_dist=0.5, spread=1.0)
 
 ---
 
-<p align="justify"><h2>8. Conclusão</h2></p>
+
+
+<hr>
+
+<p align="justify"><h2><b>8. Conclusão</b></h2></p>
 
 ```python
 n_neighbors=200
 min_dist=1.0
 spread=1.5
 ```
-
-<p align="justify">
-O gráfico não está “ruim” — ele está <b>correto</b>. A sobreposição é a verdade do espaço original.
-</p>
-```
-
-<hr>
-
-<p align="justify"><h2><b>3. Conclusão</b></h2></p>
 
 <p align="justify">
 Em resumo, a calibração permite ajustar o UMAP para extrair a melhor interpretabilidade possível. Isso supera as limitações clássicas do t-SNE, entregando um mapa onde a geometria 2D comunica fielmente a relação técnica entre as classes de dados.
