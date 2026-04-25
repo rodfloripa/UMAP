@@ -127,18 +127,39 @@ umap.UMAP(n_neighbors=30, min_dist=0.5, spread=1.0)
 
 <hr>
 
-<p align="justify"><h2><b>8. Conclusão</b></h2></p>
+
+<p align="justify"><h2>8. Conclusão</h2></p>
 
 ```python
 n_neighbors=200
 min_dist=1.0
 spread=1.5
-```
+metric='cosine'
+init='pca'
+````
 
 <p align="justify">
-Em resumo, a calibração permite ajustar o UMAP para extrair a melhor interpretabilidade possível. Isso supera as limitações clássicas do t-SNE, entregando um mapa onde a geometria 2D comunica fielmente a relação técnica entre as classes de dados.
-
+O experimento confirma que existe um limite intrínseco na projeção do MNIST em 2D. A configuração acima representa o melhor compromisso possível para preservação global das distâncias.
 </p>
+
+<p align="justify">
+O valor de <b>Shepard = 0.508</b> deve ser considerado <b>excelente</b> dentro desse contexto, pois está alinhado com o limite estrutural do dataset em 2D (~51% de correlação global). Ganhos adicionais não dependem de tuning do UMAP, mas sim de melhorias no embedding original.
+</p>
+
+<p align="justify">
+A sobreposição dos clusters não é uma falha, mas uma representação fiel da ambiguidade real dos dados. Qualquer separação mais limpa implicaria distorção das distâncias.
+</p>
+
+<p align="justify">
+Portanto, a escolha dos parâmetros deve ser guiada pelo objetivo final:
+</p>
+
+<ul>
+<li><b>Análise científica:</b> priorizar fidelidade (configuração atual)</li>
+<li><b>Visualização:</b> priorizar separação visual, mesmo com perda de fidelidade</li>
+</ul>
+
+
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/rodfloripa/UMAP/main/umap.png ">
