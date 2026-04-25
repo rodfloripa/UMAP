@@ -143,4 +143,6 @@ Em resumo, a calibração permite ajustar o UMAP para extrair a melhor interpret
 <p align="center">
   <img src="https://raw.githubusercontent.com/rodfloripa/UMAP/main/umap.png ">
 </p>
-
+<p align="center">
+O gráfico não está “ruim” — ele está <b>correto</b>. A sobreposição é a verdade do espaço original.
+</p>
